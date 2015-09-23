@@ -13,6 +13,12 @@
   }
 }
 
+@mixin max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
 @mixin hide-text {
   overflow: hidden;
   text-indent: 101%;

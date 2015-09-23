@@ -1,6 +1,6 @@
 .header {
   margin: 0 auto;
-  padding: 80px 0;
+  @extend %section-padding;
 }
 
 .logo {
