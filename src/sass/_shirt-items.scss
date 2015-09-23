@@ -16,4 +16,9 @@
     margin: 10px auto;
     padding: 0 10px;
   }
+
+  transition: transform .6s ease;
+  &.is-active {transform: scale3d(2,2,1); }
 }
+
+

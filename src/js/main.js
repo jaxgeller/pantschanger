@@ -8,12 +8,19 @@ const sizes = document.getElementById('overlay-sizes');
 });
 
 function shirtClickHandler() {
-  document.body.classList.add('no-scroll');
+  var h = document.body.clientHeight;
+  overlay.style.height = (h + 'px');
   overlay.style.backgroundColor = this.dataset.color;
   title.textContent = this.alt;
-  // sizes.appendChild(setSizes(this.dataset.sizes));
   overlay.classList.add('is-active');
 
-  // this.style.transformOrigin = this.dataset.direction;
-  // this.classList.add('is-active');
+  this.style.transformOrigin = this.dataset.direction;
+  this.classList.add('is-active');
 }
+
+
+document.getElementById('overlay-back').addEventListener('click', function() {
+  [].slice.call(document.querySelectorAll('.is-active')).forEach(function(item) {
+    item.classList.remove('is-active');
+  });
+});
