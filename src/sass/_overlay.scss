@@ -1,0 +1,66 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity ease .1s;
+  text-align: center;
+  color: white;
+
+  &.is-active {
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+.overlay-title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  opacity: 0;
+
+  transform: translate3D(0,20px,0);
+  transition: all ease .5s .45s;
+
+  .is-active & { transform: translate3D(0,0,0); opacity: 1; }
+}
+
+.overlay-sizes {
+  margin-bottom: 18px;
+
+  span { margin-left: 5px; }
+  span:first-of-type {margin-left: 0;}
+
+  font-size: 18px;
+  font-weight: lighter;
+
+  opacity: 0;
+
+  transition: opacity ease .5s .65s;
+
+  .is-active & { opacity: 1; }
+}
+
+.overlay-back {
+  position: absolute;
+  top: 195px;
+  left: 10%;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translate3D(5px, 0,0);
+  transition: all ease .33s 1s;
+
+  .is-active & { transform: translate3D(0,0,0); opacity: 1; }
+}
+
+.overlay-bottom {
+  background-color: white;
+  opacity: 0;
+
+  transition: opacity ease .5s .75s;
+  .is-active & { opacity: 1; }
+}
