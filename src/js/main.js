@@ -34,9 +34,31 @@ function shirtClickHandler() {
   overlay.style.backgroundColor = self.dataset.color;
   overlay.classList.add('is-active');
 
-  self.style.transformOrigin = self.dataset.direction;
+  // self.style.transformOrigin = self.dataset.direction;
   self.classList.add('is-active');
+
+  if (window.innerWidth < 960) {
+    setTimeout(function() {
+      var pos = this.getBoundingClientRect().top + window.pageYOffset - 250;
+      var timeStart = null;
+      var timeElapsed = null;
+
+      function scroll(currTime) {
+        if (!timeStart) timeStart = currTime;
+        timeElapsed = currTime - timeStart;
+        let next = Math.round(ease(timeElapsed, 0, pos, 1000));
+        window.scrollTo(0, next);
+
+        if (next < pos)
+          requestAnimationFrame(scroll)
+      }
+
+      requestAnimationFrame(scroll);
+
+    }.bind(this), 1000);
+  }
 }
+
 
 function setSizes(s) {
   const holder = d.createDocumentFragment();
@@ -62,8 +84,6 @@ d.getElementById('overlay-back').addEventListener('click', function() {
     sizes.innerHTML = '';
   });
 });
-
-
 
 class Counter {
 
@@ -95,4 +115,9 @@ class Counter {
   ease(t, b, c, d) {
     return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
   }
+}
+
+
+function ease(t, b, c, d) {
+  return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
 }

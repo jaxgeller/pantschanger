@@ -1,3 +1,4 @@
+
 .shirts-container {
   @include clearfix;
 }
@@ -14,11 +15,30 @@
     float: none;
     display: block;
     margin: 10px auto;
-    padding: 0 10px;
+    padding: 0 20px;
+
+    transform-origin: center center !important;
+    &.is-active {
+      transform: scale3d(1.25, 1.25, 1)  !important;
+    }
   }
 
   transition: transform .6s ease;
   &.is-active {transform: scale3d(2,2,1); }
 }
 
+$tr: (
+  1: -180px 0,
+  2: 140px 0,
+  3: 460px 0,
 
+  4: -180px 320px,
+  5: 140px 320px,
+  6: 460px 320px,
+);
+
+@each $n, $origin in $tr {
+  .shirt-item:nth-child(#{$n}) {
+    transform-origin: $origin;
+  }
+}
