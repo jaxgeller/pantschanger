@@ -7,13 +7,14 @@
   padding-top: 80px;
   visibility: hidden;
   opacity: 0;
-  transition: all ease .1s;
+  transition: all ease .16s;
   text-align: center;
   color: white;
 
   &.is-active {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0s;
   }
 
   @include max($container) {
@@ -26,10 +27,10 @@
   font-size: 48px;
   opacity: 0;
 
-  transform: translate3D(0,20px,0);
+  transform: translate3d(0,20px,0);
   transition: all ease .5s .45s;
 
-  .is-active & { transform: translate3D(0,0,0); opacity: 1; }
+  .is-active & { transform: translate3d(0,0,0); opacity: 1; }
 }
 
 .overlay-sizes {
@@ -55,10 +56,10 @@
   cursor: pointer;
 
   opacity: 0;
-  transform: translate3D(5px, 0,0);
+  transform: translate3d(5px, 0,0);
   transition: all ease .33s 1s;
 
-  .is-active & { transform: translate3D(0,0,0); opacity: 1; }
+  .is-active & { transform: translate3d(0,0,0); opacity: 1; }
 
   @include max($container) {
     top: 155px;
