@@ -19,6 +19,8 @@ let opts = {
 function shirtClickHandler() {
   let self = this;
 
+  if (!self.classList.contains('is-active')) {
+
   title.textContent = self.alt;
   sizes.appendChild(setSizes(self.dataset.sizes));
 
@@ -39,26 +41,33 @@ function shirtClickHandler() {
 
   if (window.innerWidth < 960) {
     setTimeout(function() {
-      var pos = this.getBoundingClientRect().top + window.pageYOffset - 250;
+      var start = window.pageYOffset;
+      var pos = this.getBoundingClientRect().top + window.pageYOffset - (this.getBoundingClientRect().height/2) ;
+          pos = pos - 50;
       var timeStart = null;
       var timeElapsed = null;
 
       function scroll(currTime) {
         if (!timeStart) timeStart = currTime;
         timeElapsed = currTime - timeStart;
-        let next = Math.round(ease(timeElapsed, 0, pos, 1000));
-        window.scrollTo(0, next);
 
+        let next = Math.round(ease(timeElapsed, start, pos - start, 1000));
+
+        window.scrollTo(0, next);
         if (next < pos)
           requestAnimationFrame(scroll)
       }
 
       requestAnimationFrame(scroll);
+    }.bind(this), 500);
 
-    }.bind(this), 1000);
+    setTimeout(function() {
+      cancelAnimationFrame(scroll);
+    }, 2000);
   }
-}
 
+}//endif
+}
 
 function setSizes(s) {
   const holder = d.createDocumentFragment();
