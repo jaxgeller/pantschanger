@@ -1,0 +1,19 @@
+.header {
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.logo {
+  display: inline-block;
+  width: 140px;
+  height: 70px;
+  background: url('/images/logo.svg') center center no-repeat;
+
+  @include hide-text;
+}
+
+.tagline {
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #5F605C;
+}

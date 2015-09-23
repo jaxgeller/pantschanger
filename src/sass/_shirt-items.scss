@@ -1,0 +1,10 @@
+.shirts-container {
+  @include clearfix;
+}
+
+.shirt-item {
+  float: left;
+  max-height: 300px;
+  max-width: 300px;
+  margin: 10px;
+}

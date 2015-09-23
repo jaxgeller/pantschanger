@@ -1,0 +1,9 @@
+.container {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.clearfix { @include clearfix; }
+.center { text-align: center; }
+.no-scroll {overflow-y: hidden;}
+
