@@ -39,6 +39,10 @@ function shirtClickHandler() {
   let origin = self.dataset.direction;
   origin = origin.split(' ');
   origin[1] = (parseInt(origin[1]) - window.pageYOffset) + 'px';
+
+  origin[0] = (-1 * (((window.innerWidth - 600)/2) - self.getBoundingClientRect().left + 10)) + 'px';
+
+
   self.style.transformOrigin = origin.join(' ');
   self.classList.add('is-active');
   }
