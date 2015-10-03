@@ -40,7 +40,7 @@ function shirtClickHandler() {
   origin[0] = (-1 * (((window.innerWidth - 600)/2) - self.getBoundingClientRect().left + 10)) + 'px';
 
   if (window.innerWidth < 960) {
-    origin[1] = ((window.innerHeight + self.getBoundingClientRect().top) - 225) + 'px';
+    origin[1] = ((self.getBoundingClientRect().top - 225) * 4) + 'px';
   } else {
     origin[1] = (self.getBoundingClientRect().top - 225) + 'px';
   }
