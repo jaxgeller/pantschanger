@@ -36,12 +36,14 @@ function shirtClickHandler() {
   overlay.style.backgroundColor = self.dataset.color;
   overlay.classList.add('is-active');
 
-  let origin = self.dataset.direction;
-  origin = origin.split(' ');
-  origin[1] = (parseInt(origin[1]) - window.pageYOffset) + 'px';
-
+  let origin = [];
   origin[0] = (-1 * (((window.innerWidth - 600)/2) - self.getBoundingClientRect().left + 10)) + 'px';
 
+  if (window.innerWidth < 960) {
+    origin[1] = ((window.innerHeight + self.getBoundingClientRect().top) - 225) + 'px';
+  } else {
+    origin[1] = (self.getBoundingClientRect().top - 225) + 'px';
+  }
 
   self.style.transformOrigin = origin.join(' ');
   self.classList.add('is-active');
