@@ -36,37 +36,11 @@ function shirtClickHandler() {
   overlay.style.backgroundColor = self.dataset.color;
   overlay.classList.add('is-active');
 
-  // self.style.transformOrigin = self.dataset.direction;
+  let origin = self.dataset.direction;
+  origin = origin.split(' ');
+  origin[1] = (parseInt(origin[1]) - window.pageYOffset) + 'px';
+  self.style.transformOrigin = origin.join(' ');
   self.classList.add('is-active');
-
-  if (window.innerWidth < 960) {
-
-  }
-  //   setTimeout(function() {
-  //     var start = window.pageYOffset;
-  //     var pos = this.getBoundingClientRect().top + window.pageYOffset - (this.getBoundingClientRect().height/2) ;
-  //         pos = pos - 50;
-  //     var timeStart = null;
-  //     var timeElapsed = null;
-
-  //     function scroll(currTime) {
-  //       if (!timeStart) timeStart = currTime;
-  //       timeElapsed = currTime - timeStart;
-
-  //       let next = Math.round(ease(timeElapsed, start, pos - start, 1000));
-
-  //       window.scrollTo(0, next);
-  //       if (next < pos)
-  //         requestAnimationFrame(scroll)
-  //     }
-
-  //     requestAnimationFrame(scroll);
-  //   }.bind(this), 500);
-
-  //   setTimeout(function() {
-  //     cancelAnimationFrame(scroll);
-  //   }, 2000);
-  // }
   }
 }
 

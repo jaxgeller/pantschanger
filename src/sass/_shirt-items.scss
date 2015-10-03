@@ -26,20 +26,3 @@
   transition: transform .6s ease;
   &.is-active {transform: scale3d(2,2,1); }
 }
-
-
-$tr: (
-  1: -180px 0,
-  2: 140px 0,
-  3: 460px 0,
-
-  4: -180px 320px,
-  5: 140px 320px,
-  6: 460px 320px,
-);
-
-@each $n, $origin in $tr {
-  .shirt-item:nth-child(#{$n}) {
-    transform-origin: $origin;
-  }
-}
