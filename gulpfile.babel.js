@@ -50,7 +50,7 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer({ browsers: [ 'last 2 versions', 'ie >= 9', 'Android >= 4' ] }))
-    // .pipe(minify())
+    .pipe(minify())
     .pipe(sourcemaps.write('./maps', { addComment: false }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
