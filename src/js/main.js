@@ -1,2 +1,6 @@
 import Shirts from './shirts.js';
-new Shirts();
+
+document.addEventListener("DOMContentLoaded", function() {
+  new Shirts();
+}, false);
+
