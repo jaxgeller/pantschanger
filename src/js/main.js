@@ -50,6 +50,7 @@ function shirtClickHandler() {
   }
 
   self.style.transformOrigin = origin.join(' ');
+  self.style.webkitTransformOrigin = origin.join(' ');
   self.classList.add('is-active');
   }
 }

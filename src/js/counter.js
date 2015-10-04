@@ -17,7 +17,7 @@ export default class Counter {
     this.selector.textContent = this.next;
 
     if (this.next < this.end)
-      requestAnimationFrame((time)=> this.tick(time))
+      requestAnimationFrame(time => this.tick(time))
   }
 
   run() {
