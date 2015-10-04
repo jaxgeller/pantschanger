@@ -40,7 +40,9 @@ function shirtClickHandler() {
   origin[0] = (-1 * (((window.innerWidth - 600)/2) - self.getBoundingClientRect().left + 10)) + 'px';
 
   if (window.innerWidth < 960) {
+    document.body.classList.add('is-active');
     origin[1] = ((self.getBoundingClientRect().top - 225) * 4) + 'px';
+    document.ontouchmove = function(e) {e.preventDefault()}
   } else {
     origin[1] = (self.getBoundingClientRect().top - 225) + 'px';
   }
@@ -72,6 +74,7 @@ d.getElementById('overlay-back').addEventListener('click', function() {
   [].slice.call(d.querySelectorAll('.is-active')).forEach(function(item) {
     item.classList.remove('is-active');
     sizes.innerHTML = '';
+    document.ontouchmove = function(e) {return true;}
   });
 });
 

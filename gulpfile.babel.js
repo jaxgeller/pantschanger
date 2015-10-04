@@ -49,7 +49,7 @@ gulp.task('sass', () => {
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(autoprefixer({ browsers: [ 'last 2 versions', 'ie >= 9', 'Android >= 4.1' ] }))
+    .pipe(autoprefixer({ browsers: [ 'last 2 versions', 'ie >= 9', 'Android >= 4' ] }))
     // .pipe(minify())
     .pipe(sourcemaps.write('./maps', { addComment: false }))
     .pipe(gulp.dest('dist'))
@@ -101,7 +101,7 @@ gulp.task('images', () => {
 // FONTS
 
 gulp.task('fonts', () => {
-  return gulp.src('src/fonts/**/*.{eot,svg,ttf,woff,woff2}')
+  return gulp.src('src/fonts/**/*.{ttf,woff,woff2}')
     .pipe(gulp.dest('dist/fonts'))
 })
 

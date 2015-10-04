@@ -13,7 +13,7 @@
 
   &.is-active {
     visibility: visible;
-    opacity: 0.3;
+    opacity: 1;
     transition-delay: 0s;
   }
 
@@ -62,7 +62,7 @@
   .is-active & { transform: translate3d(0,0,0); opacity: 1; }
 
   @include max($container) {
-    top: 155px;
+    top: 148px;
   }
 }
 
