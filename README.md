@@ -5,7 +5,7 @@
 1. Git clone this repo
 2. run `npm install`
 3. run `./node_modules/.bin/gulp`
-4. goto http://localhost:3000
+4. goto [http://localhost:3000](http://localhost:3000)
 
 ### License
 
