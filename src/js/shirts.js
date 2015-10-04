@@ -40,10 +40,12 @@ export default class Shirts {
 
   shirtClickHandler(e) {
     const el = e.target;
-    this._setOverlay(el);
-    this._setOrigin(el);
+    if (!el.classList.contains('is-active')) {
+      this._setOverlay(el);
+      this._setOrigin(el);
 
-    el.classList.add('is-active');
+      el.classList.add('is-active');
+    }
   }
 
   _setOrigin(el) {
