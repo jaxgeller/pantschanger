@@ -12,7 +12,7 @@ export default class Shirts {
 
   // Click Handlers
   _addShirtClickHandler() {
-    Array.prototype.slice.call(this.shirts).forEach(shirt=> {
+    Array.prototype.slice.call(this.shirts).forEach(shirt => {
       shirt.addEventListener('click', this._shirtClickHandler.bind(shirt));
     });
   }

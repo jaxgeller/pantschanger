@@ -1,4 +1,5 @@
-import Counter from './counter';
+import Counter from './counter.js';
+import Shirts from './shirts.js';
 
 const d = document;
 
