@@ -40,12 +40,13 @@ export default class Shirts {
     let rect = el.getBoundingClientRect();
 
     let origin = [];
-    origin[0] = (-1 * (((width - 600)/2) - rect.left + 10)) + 'px';
 
     if (width < 960) {
+      origin[0] = (-1 * (((width - 600)/2) - rect.left + 20)) + 'px';
       origin[1] = ((rect.top - 225) * 4) + 'px';
       document.ontouchmove = function(e) {e.preventDefault()}
     } else {
+      origin[0] = (-1 * (((width - 600)/2) - rect.left + 10)) + 'px';
       origin[1] = (rect.top - 225) + 'px';
     }
 
