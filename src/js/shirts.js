@@ -23,7 +23,7 @@ export default class Shirts {
     });
 
     // Set Back Click Handler
-    document.getElementById('overlay-back').addEventListener('click', this._reset.bind(this));
+    document.getElementById('overlay-back').addEventListener('click', this._reset.bind(this), false);
 
     // Set Escape Key Handler
     document.onkeyup = function(e) {
@@ -32,6 +32,10 @@ export default class Shirts {
         this._reset();
       }
     }.bind(this);
+
+    // Android backbutton
+    document.addEventListener('backbutton', this.shirtClickHandler.bind(this), false);
+
   }
 
   shirtClickHandler(e) {

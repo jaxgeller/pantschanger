@@ -21,6 +21,7 @@
     margin: 20px auto;
     padding: 0 20px;
     float: none;
+    cursor: auto;
 
     &.is-active {
       transform: scale3d(1.25, 1.25, 1);

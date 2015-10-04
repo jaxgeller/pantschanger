@@ -65,6 +65,7 @@
 
   @include max($container) {
     top: 150px;
+    cursor: auto;
   }
 
   .is-active & {
