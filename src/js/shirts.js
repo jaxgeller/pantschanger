@@ -1,5 +1,11 @@
 import Counter from './counter';
 
+const breakpoint = 960;
+const maxwidth = 600;
+const margin = 10;
+const mobileMargin = 20;
+const sizeDelay = 700;
+
 function iter(selector) {
   return Array.prototype.slice.call(selector);
 }
@@ -42,12 +48,12 @@ export default class Shirts {
 
     let origin = [];
 
-    if (width < 960) {
-      origin[0] = (-1 * (((width - 600) / 2) - rect.left + 20)) + 'px';
+    if (width < breakpoint) {
+      origin[0] = (-1 * (((width - maxwidth) / 2) - rect.left + mobileMargin)) + 'px';
       origin[1] = ((rect.top - 225) * 4) + 'px';
       document.ontouchmove = function(e) {e.preventDefault();};
     } else {
-      origin[0] = (-1 * (((width - 600) / 2) - rect.left + 10)) + 'px';
+      origin[0] = (-1 * (((width - maxwidth) / 2) - rect.left + margin)) + 'px';
       origin[1] = (rect.top - 225) + 'px';
     }
 
@@ -66,7 +72,7 @@ export default class Shirts {
 
     iter(this.sizes.querySelectorAll('span')).forEach(item => {
       const c = new Counter({ selector: item, end: parseInt(item.textContent, 10) });
-      setTimeout(() => { c.run(); }, 700);
+      setTimeout(() => { c.run(); }, sizeDelay);
     });
   }
   _setSizes(s) {
