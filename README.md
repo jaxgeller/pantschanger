@@ -1,4 +1,4 @@
-# Pants Changer Website
+# Pantschanger Website
 
 ### Running
 
