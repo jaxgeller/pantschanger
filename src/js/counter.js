@@ -8,7 +8,7 @@ export default class Counter {
   }
 
   tick(currentTime) {
-    if(!this.timeStart) this.timeStart = currentTime;
+    if (!this.timeStart) this.timeStart = currentTime;
     this.timeElapsed = currentTime - this.timeStart;
 
     this.next = this.ease(this.timeElapsed, this.start, this.end - this.start, this.duration);
@@ -16,8 +16,9 @@ export default class Counter {
 
     this.selector.textContent = this.next;
 
-    if (this.next < this.end)
-      requestAnimationFrame(time => this.tick(time))
+    if (this.next < this.end) {
+      requestAnimationFrame(time => this.tick(time));
+    }
   }
 
   run() {

@@ -6,10 +6,10 @@ function iter(selector) {
 
 export default class Shirts {
   constructor() {
-    this.overlay  = document.getElementById('overlay');
-    this.title    = document.getElementById('overlay-title');
-    this.sizes    = document.getElementById('overlay-sizes');
-    this.shirts   = document.querySelectorAll('.shirt-item');
+    this.overlay = document.getElementById('overlay');
+    this.title = document.getElementById('overlay-title');
+    this.sizes = document.getElementById('overlay-sizes');
+    this.shirts = document.querySelectorAll('.shirt-item');
 
     // Set Shirt Click Handler
     iter(this.shirts).forEach(shirt => {
@@ -20,15 +20,16 @@ export default class Shirts {
     document.getElementById('overlay-back').addEventListener('click', this._reset.bind(this));
 
     // Set Escape Key Handler
-    document.onkeyup = function(e){
-      let key = e.keyCode || e.which;
-      if (key === 27)
+    document.onkeyup = function(e) {
+      const key = e.keyCode || e.which;
+      if (key === 27) {
         this._reset();
-    }.bind(this)
+      }
+    }.bind(this);
   }
 
   shirtClickHandler(e) {
-    let el = e.target;
+    const el = e.target;
     this._setOverlay(el);
     this._setOrigin(el);
 
@@ -36,21 +37,21 @@ export default class Shirts {
   }
 
   _setOrigin(el) {
-    let width = window.innerWidth;
-    let rect = el.getBoundingClientRect();
+    const width = window.innerWidth;
+    const rect = el.getBoundingClientRect();
 
     let origin = [];
 
     if (width < 960) {
-      origin[0] = (-1 * (((width - 600)/2) - rect.left + 20)) + 'px';
+      origin[0] = (-1 * (((width - 600) / 2) - rect.left + 20)) + 'px';
       origin[1] = ((rect.top - 225) * 4) + 'px';
-      document.ontouchmove = function(e) {e.preventDefault()}
+      document.ontouchmove = function(e) {e.preventDefault();};
     } else {
-      origin[0] = (-1 * (((width - 600)/2) - rect.left + 10)) + 'px';
+      origin[0] = (-1 * (((width - 600) / 2) - rect.left + 10)) + 'px';
       origin[1] = (rect.top - 225) + 'px';
     }
 
-    origin = origin.join(' ')
+    origin = origin.join(' ');
 
     el.style.transformOrigin = origin;
     el.style.webkitTransformOrigin = origin;
@@ -64,20 +65,20 @@ export default class Shirts {
     document.body.classList.add('is-active');
 
     iter(this.sizes.querySelectorAll('span')).forEach(item => {
-      let c = new Counter({ selector: item, end: parseInt(item.textContent) });
-      setTimeout(() => { c.run(); }, 700)
+      const c = new Counter({ selector: item, end: parseInt(item.textContent, 10) });
+      setTimeout(() => { c.run(); }, 700);
     });
   }
   _setSizes(s) {
     const holder = document.createDocumentFragment();
 
-    s.split(' ').forEach((item) => {
-      item = item.split('');
+    s.split(' ').forEach(item => {
+      const i = item.split('');
 
-      let span = document.createElement('span');
-      span.textContent = item[0];
+      const span = document.createElement('span');
+      span.textContent = i[0];
 
-      let text = document.createTextNode(item[1]);
+      const text = document.createTextNode(i[1]);
 
       holder.appendChild(span);
       holder.appendChild(text);
@@ -87,13 +88,13 @@ export default class Shirts {
   }
 
   _reset() {
-    let active = document.querySelectorAll('.is-active');
-    let sizes = this.sizes;
+    const active = document.querySelectorAll('.is-active');
+    const sizes = this.sizes;
 
     iter(active).forEach(item => {
       item.classList.remove('is-active');
       sizes.innerHTML = '';
-      document.ontouchmove = function(e) {return true;}
+      document.ontouchmove = function() {return true;};
     });
   }
 }

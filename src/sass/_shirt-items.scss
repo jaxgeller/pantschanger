@@ -11,6 +11,11 @@
   transition: transform .6s ease;
   cursor: pointer;
 
+  // scss-lint:disable DeclarationOrder
+  &.is-active {
+    transform: scale3d(2, 2, 1);
+  }
+
   @include max($container) {
     display: block;
     margin: 20px auto;
@@ -18,11 +23,7 @@
     float: none;
 
     &.is-active {
-      transform: scale3d(1.25, 1.25, 1)  !important;
+      transform: scale3d(1.25, 1.25, 1);
     }
-  }
-
-  &.is-active {
-    transform: scale3d(2, 2, 1);
   }
 }

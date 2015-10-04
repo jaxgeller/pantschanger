@@ -12,25 +12,19 @@ $gray: #5f605c;
 body {
   color: $gray;
   font-family: $font;
+
+  &.is-active {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
+// scss-lint:disable Indentation
 @import
+
   "layout",
   "header",
   "overlay",
   "shirt-items",
   "footer";
-
-hr {
-  width: 35px;
-  height: 1px;
-  margin: 0 auto;
-  background: $gray;
-}
-
-
-body.is-active {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
