@@ -5,71 +5,80 @@
   width: 100%;
   height: 100%;
   padding-top: 80px;
-  visibility: hidden;
-  opacity: 0;
   transition: all ease .16s;
+  color: $white;
   text-align: center;
-  color: white;
-
-  &.is-active {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
-  }
+  opacity: 0;
+  visibility: hidden;
 
   @include max($container) {
     padding-top: 40px;
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
   }
 }
 
 .overlay-title {
   margin-bottom: 20px;
+  transform: translate3d(0, 20px, 0);
+  transition: all ease .5s .45s;
   font-size: 48px;
   opacity: 0;
 
-  transform: translate3d(0,20px,0);
-  transition: all ease .5s .45s;
-
-  .is-active & { transform: translate3d(0,0,0); opacity: 1; }
+  .is-active & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .overlay-sizes {
   margin-bottom: 18px;
-
-  span { margin-left: 5px; }
-  span:first-of-type {margin-left: 0;}
-
+  transition: opacity ease .5s .65s;
   font-size: 18px;
-  font-weight: lighter;
-
   opacity: 0;
 
-  transition: opacity ease .5s .65s;
+  .is-active & {
+    opacity: 1;
+  }
 
-  .is-active & { opacity: 1; }
+  span {
+    margin-left: 5px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
 }
 
 .overlay-back {
   position: absolute;
   top: 195px;
   left: 10%;
-  cursor: pointer;
-
-  opacity: 0;
-  transform: translate3d(5px, 0,0);
+  transform: translate3d(5px, 0, 0);
   transition: all ease .33s 1s;
-
-  .is-active & { transform: translate3d(0,0,0); opacity: 1; }
+  cursor: pointer;
+  opacity: 0;
 
   @include max($container) {
     top: 148px;
   }
+
+  .is-active & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .overlay-bottom {
-  background-color: white;
+  transition: opacity ease .5s .75s;
+  background-color: $white;
   opacity: 0;
 
-  transition: opacity ease .5s .75s;
-  .is-active & { opacity: 1; }
+  .is-active & {
+    opacity: 1;
+  }
 }

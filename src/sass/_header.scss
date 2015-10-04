@@ -1,19 +1,18 @@
 .header {
-  margin: 0 auto;
   @extend %section-padding;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .logo {
+  @include hide-text;
   display: inline-block;
   width: 140px;
   height: 70px;
-  background: url('/images/logo.svg') center center no-repeat;
-
-  @include hide-text;
+  background: url("/images/logo.svg") center center no-repeat;
 }
 
 .tagline {
   margin-bottom: 25px;
   font-size: 18px;
-  color: #5F605C;
 }

@@ -1,3 +1,5 @@
+import Counter from './counter';
+
 const d = document;
 
 const shirts = d.querySelectorAll('.shirt-item');
@@ -77,40 +79,3 @@ d.getElementById('overlay-back').addEventListener('click', function() {
     document.ontouchmove = function(e) {return true;}
   });
 });
-
-class Counter {
-
-  constructor(opts) {
-    this.start = opts.start;
-    this.end = opts.end;
-    this.duration = opts.duration;
-    this.selector = opts.selector;
-  }
-
-  tick(currentTime) {
-    if(!this.timeStart) this.timeStart = currentTime;
-    this.timeElapsed = currentTime - this.timeStart;
-
-    this.next = this.ease(this.timeElapsed, this.start, this.end - this.start, this.duration);
-    this.next = Math.round(this.next);
-
-    this.selector.textContent = this.next;
-
-    if (this.next < this.end)
-      requestAnimationFrame((time)=> this.tick(time))
-  }
-
-  run() {
-    requestAnimationFrame(this.tick.bind(this));
-  }
-
-  // t: current time, b: begInnIng value, c: change In value, d: duration
-  ease(t, b, c, d) {
-    return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
-  }
-}
-
-
-function ease(t, b, c, d) {
-  return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
-}

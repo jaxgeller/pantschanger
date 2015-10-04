@@ -6,3 +6,5 @@ linters:
     order: smacss
   StringQuotes:
     style: double_quotes
+  Shorthand:
+    enabled: false
