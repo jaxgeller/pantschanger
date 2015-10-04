@@ -1,23 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="141px" height="68px" viewBox="0 0 141 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>Slice 1</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Group" sketch:type="MSLayerGroup">
-            <path d="M11.915,23.83 L11.915,11.915 L20.851,11.915 L17.872,23.83 L11.915,23.83 L11.915,23.83 Z M23.83,47.66 L23.83,35.745 L26.808,35.745 L35.745,0 L0,0 L0,47.66 L23.83,47.66 L23.83,47.66 Z" id="Fill-9" fill="#825291" sketch:type="MSShapeGroup"></path>
-            <path d="M92.34,11.915 L104.255,11.915 L104.255,47.66 L116.17,47.66 L116.17,11.915 L140,11.915 L140,0 L83.404,0 L86.383,11.915 L92.34,11.915" id="Fill-10" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M139.639,19.406 C139.76,19.376 139.88,19.366 140,19.366 L140,11.915 L116.17,11.915 L116.17,37.188 L127.724,34.3 C127.845,34.27 127.966,34.26 128.085,34.26 L128.085,37.28 L116.531,40.168 C116.411,40.198 116.289,40.213 116.17,40.213 L116.17,47.66 L140,47.66 L140,22.386 L128.446,25.275 C128.325,25.305 128.204,25.319 128.085,25.319 L128.085,22.295 L139.639,19.406" id="Fill-11" fill="#825291" sketch:type="MSShapeGroup"></path>
-            <path d="M10,59.149 L10,56.17 L20,56.17 L20,47.66 L0,47.66 L0,67.66 L20,67.66 L20,59.149 L10,59.149" id="Fill-12" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M28.511,60.159 L31.489,60.159 L31.489,67.66 L28.511,67.66 L28.511,60.159 Z M31.489,47.66 L31.489,55.16 L28.511,55.16 L28.511,47.66 L20,47.66 L20,67.66 L40,67.66 L40,47.66 L31.489,47.66 L31.489,47.66 Z" id="Fill-13" fill="#825291" sketch:type="MSShapeGroup"></path>
-            <path d="M48.511,52.66 L51.489,52.66 L51.489,55.16 L48.511,55.16 L48.511,52.66 Z M48.511,60.159 L51.489,60.159 L51.489,67.66 L48.511,67.66 L48.511,60.159 Z M53.617,47.66 L40,47.66 L40,67.66 L60,67.66 L60,47.66 L53.617,47.66 L53.617,47.66 Z" id="Fill-14" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M66.011,60.159 L68.989,60.159 L68.989,67.66 L66.011,67.66 L66.011,60.159 Z M73.989,47.66 L73.989,55.16 L71.011,55.16 L71.011,47.66 L60,47.66 L60,67.66 L80,67.66 L80,47.66 L73.989,47.66 L73.989,47.66 Z" id="Fill-15" fill="#825291" sketch:type="MSShapeGroup"></path>
-            <path d="M100,59.149 L91.489,59.149 L91.489,62.66 L88.511,62.66 L88.511,56.17 L100,56.17 L100,59.149 L100,59.149 Z M84.889,47.66 L80,47.66 L80,67.66 L100,67.66 L100,47.66 L84.889,47.66 L84.889,47.66 Z" id="Fill-16" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M110,59.149 L110,56.17 L120,56.17 L120,54.149 L110,54.149 L110,51.17 L120,51.17 L120,47.66 L100,47.66 L100,67.66 L120,67.66 L120,59.149 L110,59.149" id="Fill-17" fill="#825291" sketch:type="MSShapeGroup"></path>
-            <path d="M128.511,52.66 L131.489,52.66 L131.489,55.16 L128.511,55.16 L128.511,52.66 Z M132.894,67.66 L128.947,63.713 L131.053,61.607 L137.106,67.66 L132.894,67.66 L132.894,67.66 Z M120,51.17 L120,67.66 L140,67.66 L140,47.66 L120,47.66 L120,51.17 L120,51.17 Z" id="Fill-18" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M23.83,47.66 L41.702,47.66 L47.66,17.872 L53.617,47.66 L71.489,47.66 L59.574,0 L35.745,0 L23.83,47.66" id="Fill-19" fill="#5CBEBD" sketch:type="MSShapeGroup"></path>
-            <path d="M92.34,11.915 L92.34,35.745 L83.404,0 L59.574,0 L71.489,47.66 L81.869,47.66 L76.002,24.191 C75.972,24.07 75.962,23.949 75.962,23.83 L78.982,23.83 L84.849,47.298 C84.879,47.419 84.889,47.54 84.889,47.66 L104.255,47.66 L104.255,11.915 L92.34,11.915" id="Fill-20" fill="#825291" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 470 227.1" style="enable-background:new 0 0 470 227.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00E5DF;}
+	.st1{fill:#A252CC;}
+</style>
+<g>
+	<polygon class="st0" points="120,0 80,160 140,160 160,60 180,160 240,160 200,0 	"/>
+	<path class="st1" d="M350,160V40h-40v80l-20-80L280,0h-80l40,160h8.4h26.5l-19.7-78.8c-0.1-0.4-0.1-0.8-0.1-1.2h10.1l20,80"/>
+	<polygon class="st0" points="33.6,198.6 33.6,188.6 67.1,188.6 67.1,160 0,160 0,227.1 67.1,227.1 67.1,198.6 	"/>
+	<path class="st1" d="M0,160h80v-40h10L120,0H0V160z M40,40h30L60,80H40V40z"/>
+	<path class="st1" d="M468.8,65.1c0.4-0.1,0.8-0.1,1.2-0.1V40h-80v84.8l38.8-9.7c0.4-0.1,0.8-0.1,1.2-0.1v10.1l-38.8,9.7
+		c-0.4,0.1-0.8,0.1-1.2,0.2v25h80V75.2l-38.8,9.7c-0.4,0.1-0.8,0.1-1.2,0.2V74.8L468.8,65.1z"/>
+	<path class="st0" d="M402.9,227.1h43.3l-13.3-13.3l7.1-7.1l20.3,20.3h9.7V160h-67.1V227.1z M431.4,176.8h10v8.4h-10V176.8z"/>
+	<polygon class="st1" points="369.3,198.6 369.3,188.6 402.9,188.6 402.9,181.8 369.3,181.8 369.3,171.8 402.9,171.8 402.9,160 
+		335.7,160 335.7,227.1 402.9,227.1 402.9,198.6 	"/>
+	<path class="st0" d="M268.6,227.1h67.1V160h-67.1V227.1z M297.1,188.6h38.6v10h-28.6v11.8h-10V188.6z"/>
+	<path class="st1" d="M248.4,185.2h-10V160h-37v67.1h67.1V160h-20.2V185.2z M231.6,227.1h-10V202h10V227.1z"/>
+	<path class="st0" d="M134.3,227.1h67.1V160h-67.1V227.1z M162.9,176.8h10v8.4h-10V176.8z M162.9,202h10v25.2h-10V202z"/>
+	<path class="st1" d="M105.7,185.2h-10V160H80H67.1v28.6h0v10h0v28.6h67.1V160h-28.6V185.2z M105.7,227.1h-10V202h10V227.1z"/>
+	<polygon class="st0" points="280,0 290,40 350,40 350,160 390,160 390,40 470,40 470,0 	"/>
+</g>
 </svg>
