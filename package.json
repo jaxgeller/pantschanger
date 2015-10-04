@@ -5,7 +5,7 @@
   "description": "",
   "author": "@jhil x @jaxgeller",
   "scripts": {
-    "lint": "eslint src/js/*.js; rm npm-debug.log > /dev/null"
+    "lint": "eslint src/js/*.js; scss-lint -c .scss-lint src/sass/**.scss; exit 0"
   },
   "devDependencies": {
     "babel": "*",
